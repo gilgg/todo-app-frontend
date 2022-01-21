@@ -9,11 +9,16 @@ const useFetchTodos = (token) => {
   useEffect(() => {
     const getTodos = async () => {
       if (token) {
-        const todos = await axios.get("/api/todos", {
-          headers: {
-            Authorization: token,
-          },
-        });
+        // const todos = await axios.get("/api/todos", {
+        // const todos = await axios.get("http://localhost:5000/api/todos", 
+        const todos = await axios.get(
+          "https://gil-todo-app.herokuapp.com/api/todos",
+          {
+            headers: {
+              Authorization: token,
+            },
+          }
+        );
         dispatch(todoActions.setTodos(todos.data));
       }
     };
