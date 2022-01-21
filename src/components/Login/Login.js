@@ -19,12 +19,9 @@ const Login = () => {
     const password = passwordRef.current.value;
     const path = isLogin ? "/login" : "/signup";
 
-    // const tokenRaw = await axios.post(`/api/users${path}`, {
-    // const tokenRaw = await axios.post(`https://gil-todo-app.herokuapp.com/api/users${path}`, {
-    const tokenRaw = await axios.post(`${process.env.REACT_APP_API_URL}/users${path}`, {
-    // const tokenRaw = await axios.post(
-    //   `http://localhost:5000/api/users${path}`,
-    //   {
+    const tokenRaw = await axios.post(
+      `${process.env.REACT_APP_API_URL}/users${path}`,
+      {
         email,
         password,
       }

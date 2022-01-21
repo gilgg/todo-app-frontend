@@ -9,10 +9,7 @@ const useFetchTodos = (token) => {
   useEffect(() => {
     const getTodos = async () => {
       if (token) {
-        // const todos = await axios.get("/api/todos", {
-        // const todos = await axios.get("http://localhost:5000/api/todos",
         const todos = await axios.get(
-          // "https://gil-todo-app.herokuapp.com/api/todos",
           `${process.env.REACT_APP_API_URL}/todos`,
           {
             headers: {

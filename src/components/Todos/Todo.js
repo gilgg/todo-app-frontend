@@ -13,9 +13,6 @@ const Todo = ({ id, desc, isCompleted }) => {
   const token = useSelector((state) => state.todo.token);
   const [isEdit, setIsEdit] = useState(false);
   const [isCompletedVal, setIsCompletedVal] = useState(isCompleted);
-  // const httpReqUrl = `/api/todos/${id}`;
-  // const httpReqUrl = `https://gil-todo-app.herokuapp.com/api/todos/${id}`;
-  // const httpReqUrl = `http://localhost:5000/api/todos/${id}`;
   const httpReqUrl = `${process.env.REACT_APP_API_URL}/todos/${id}`;
 
   const onEditIsCompletedHandler = async () => {

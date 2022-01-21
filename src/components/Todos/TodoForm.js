@@ -30,9 +30,6 @@ const TodoForm = ({ type, id, show = false, setShow, defVal = "" }) => {
 
     const todos = await axios({
       method: type === "add" ? "post" : "patch",
-      // url: `/api/todos${type === "add" ? "" : `/${id}`}`,
-      // url: `https://gil-todo-app.herokuapp.com/api/todos${
-      // url: `http://localhost:5000/api/todos${
       url: `${process.env.REACT_APP_API_URL}/todos${
         type === "add" ? "" : `/${id}`
       }`,

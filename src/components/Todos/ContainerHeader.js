@@ -15,9 +15,6 @@ const ContainerHeader = () => {
   const onLogout = async () => {
     await axios({
       method: "post",
-      // url: `/api/users/logout`,
-      // url: `https://gil-todo-app.herokuapp.com/api/users/logout`,
-      // url: `http://localhost:5000/api/users/logout`,
       url: `${process.env.REACT_APP_API_URL}/users/logout`,
       headers: {
         Authorization: token,
