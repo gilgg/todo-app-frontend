@@ -54,8 +54,6 @@ The Todo App lets you handle your day better and achieve all of your daily todos
 
 # Video 🎥
 
-
-
 https://user-images.githubusercontent.com/96532357/151238177-e2895421-2350-461d-8e63-40bac2a91301.mp4
 
 
